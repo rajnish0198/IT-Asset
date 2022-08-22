@@ -1,0 +1,28 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2022-06-11 11:29:14.693601",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Bill",
+ "modified": "2022-06-22 10:13:59.780195",
+ "modified_by": "Administrator",
+ "module": "Manage Asset",
+ "name": "Issue Asset Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "Select p.company,p.emp_id,p.name1,q.item_name,p.asset_source_location,p.asset_target_location,q.asset_tag,q.asset_categoary,q.qty_given,q.model_no,q.deploy_date,q.asset_return_date from `tabIssue Assets` p INNER JOIN `tabAsset Take` q ON p.name = q.parent;",
+ "ref_doctype": "Issue Assets",
+ "report_name": "Issue Asset Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-06-11 09:54:06.455397",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "company",
+  "employee_name",
+  "emp_id",
+  "name1",
+  "asset_source_location",
+  "asset_target_location",
+  "asset_take",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_name.employee_id_no",
+   "fieldname": "emp_id",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Emp Id",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee_name.first_name",
+   "fieldname": "name1",
+   "fieldtype": "Read Only",
+   "label": "Name"
+  },
+  {
+   "fieldname": "asset_source_location",
+   "fieldtype": "Link",
+   "label": "Asset Source Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "asset_target_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Target Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "asset_take",
+   "fieldtype": "Table",
+   "label": "Asset Take",
+   "options": "Asset Take"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Issue Assets",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "ISSUE-ID-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-06-21 15:17:57.424003",
+ "modified_by": "Administrator",
+ "module": "Manage Asset",
+ "name": "Issue Assets",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

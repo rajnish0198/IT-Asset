@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-06-14 09:56:57.977509",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-06-21 10:11:44.739659",
+ "modified_by": "Administrator",
+ "module": "Manage Asset",
+ "name": "Company Asset Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select item_name,asset_category,asset_location,asset_owner,asset_type,asset_quantity,status from `tabCompany Asset`;",
+ "ref_doctype": "Company Asset",
+ "report_name": "Company Asset Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

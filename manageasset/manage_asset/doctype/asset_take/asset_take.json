@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-06-11 09:51:45.026286",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asseet_name",
+  "item_name",
+  "asset_tag",
+  "asset_categoary",
+  "model_no",
+  "qty_available",
+  "qty_given",
+  "balance_qty",
+  "deploy_date",
+  "asset_return_date",
+  "consumable"
+ ],
+ "fields": [
+  {
+   "fieldname": "asseet_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asseet Name",
+   "options": "Asset",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_tag",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Tag"
+  },
+  {
+   "fieldname": "asset_categoary",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset Categoary",
+   "options": "Asset Category"
+  },
+  {
+   "fieldname": "model_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model No."
+  },
+  {
+   "default": "0",
+   "fieldname": "consumable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Consumable"
+  },
+  {
+   "fieldname": "deploy_date",
+   "fieldtype": "Date",
+   "label": "Deploy Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty_given",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Qty Given",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asseet_name.asset_qty",
+   "fieldname": "qty_available",
+   "fieldtype": "Read Only",
+   "label": "Qty Available"
+  },
+  {
+   "fieldname": "balance_qty",
+   "fieldtype": "Int",
+   "label": "Balance Qty"
+  },
+  {
+   "fetch_from": "asseet_name.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "asset_return_date",
+   "fieldtype": "Date",
+   "label": "Asset Return Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-06-21 11:50:37.175593",
+ "modified_by": "Administrator",
+ "module": "Manage Asset",
+ "name": "Asset Take",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
